@@ -1,8 +1,8 @@
 function fake (){
-  echo "Fake commit for $1 $2 2013";
+  echo "Fake commit for $1 $2 2012";
   echo "--------------------------"
-  date $1$2"120013";
-  echo "Fake commit for $1 $2 2013" > "fake/$1,$2.txt";
+  date $1$2"120012";
+  echo "Fake commit for $1 $2 2012" > "fake/$1,$2.txt";
   git add "fake/$1,$2.txt";
   git commit -m "Simple git commit $1,$2";
 }
