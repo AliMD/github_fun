@@ -1,10 +1,13 @@
 function fake (){
   echo "Fake commit for $1 $2 2012";
-  echo "--------------------------"
+  echo "--------------------------";
   date $1$2"120012";
-  echo "Fake commit for $1 $2 2012" > "fake/$1,$2.txt";
-  git add "fake/$1,$2.txt";
-  git commit -m "Simple git commit $1,$2";
+  echo "--------------------------";
+  for k in {1..10}; do
+    echo "Fake commit for $1 $2 2012 ($k)" > "fake/$1,$2.txt";
+    git add "fake/$1,$2.txt";
+    git commit -m "Simple git commit $1,$2 ($k)";
+  done;
 }
 
 for i in {1..9}; do
